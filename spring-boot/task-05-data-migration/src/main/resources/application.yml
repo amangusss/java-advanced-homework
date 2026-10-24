@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: crud-data-migration
+  profiles:
+    default: local
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          crud-client:
+            registration:
+              client-id: crud-client
+              client-authentication-methods:
+                - none
+              authorization-grant-types:
+                - authorization_code
+                - refresh_token
+              redirect-uris:
+                - http://127.0.0.1:8080/authorized
+              scopes:
+                - openid
+            require-proof-key: true
+            token:
+              access-token-time-to-live: 15m

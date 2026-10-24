@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/products_dev
+    username: ${DB_USERNAME:products}
+    password: ${DB_PASSWORD:products}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    com.epam.homework: DEBUG

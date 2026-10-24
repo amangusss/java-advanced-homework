@@ -28,4 +28,3 @@ Thumbs.db
 # Secrets
 *.env
 .env*
-application-local.yml
